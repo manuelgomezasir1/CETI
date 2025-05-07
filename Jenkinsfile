@@ -2,18 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building...'
-                sh 'mvn clean package'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing...'
-                sh 'mvn test'
-            }
-        }
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker Image...'
